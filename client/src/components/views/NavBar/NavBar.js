@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import LeftMenu from './Sections/LeftMenu';
 import RightMenu from './Sections/RightMenu';
-import { Drawer, Button, Icon } from 'antd';
+import { Drawer, Button  } from 'antd';
 import './Sections/Navbar.css';
+import   { SmileOutlined }  from '@ant-design/icons';
 
 function NavBar() {
   const [visible, setVisible] = useState(false)
@@ -24,7 +25,7 @@ function NavBar() {
         <div className="menu_left">
           <LeftMenu mode="horizontal" />
         </div>
-        <div className="menu_rigth">
+        <div className="menu_right">
           <RightMenu mode="horizontal" />
         </div>
         <Button
@@ -32,7 +33,7 @@ function NavBar() {
           type="primary"
           onClick={showDrawer}
         >
-          <Icon type="align-right" />
+          <SmileOutlined type="align-right" />
         </Button>
         <Drawer
           title="Basic Drawer"
